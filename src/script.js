@@ -1,24 +1,42 @@
-// Recebendo as Variáveis.
-let str = 5;
-let dex = 5;
-let vit = 5;
-let int = 5;
-let wis = 5;
-let lck = 5;
+const shownRace = document.getElementById('shown-race');
+const shownTitle = document.getElementById('shown-title');
+const shownPerson = document.getElementById('shown-person');
+const form = document.querySelectorAll('.shown');
+let active;
 
-//Processando as variáveis.
-let calcHp = 100 + (vit * 50);
-let calcMp = 50 + (int * 25);
-let calcRegenHp = (calcHp * str) / 1000;
-let calcRegenMp = (calcMp * wis) / 1000;
-let calcTempRegenHp = calcHp / calcRegenHp;
-let calcTempRegenMp = calcMp / calcRegenMp;
+shownRace.addEventListener('click', () => {
+    active = document.querySelectorAll('.active');
 
-//Mostrando o Resultado.
-console.log(calcHp);
-console.log(calcRegenHp);
-console.log(calcTempRegenHp + 'min');
-console.log('');
-console.log(calcMp);
-console.log(calcRegenMp);
-console.log(calcTempRegenMp + 'min');
+    if (active.length > 0) {
+        for (let i = 0; i < form.length; i += 1) {
+            form[i].className = '';
+        }
+    } else {
+        form[0].className = 'active';
+    }
+});
+
+shownTitle.addEventListener('click', () => {
+    active = document.querySelectorAll('.active');
+
+    if (active.length > 0) {
+        for (let i = 0; i < form.length; i += 1) {
+            form[i].className = 'shown';
+        }
+    } else {
+        form[1].className = 'shown active';
+    }
+});
+
+shownPerson.addEventListener('click', () => {
+    active = document.querySelectorAll('.active');
+
+    console.log(active.length)
+    if (active.length > 0) {
+        for (let i = 0; i < form.length; i += 1) {
+            form[i].className = '';
+        }
+    } else {
+        form[2].className = 'active';
+    }
+});

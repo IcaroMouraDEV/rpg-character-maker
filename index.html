@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPG Character Maker</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Importando Bootstrap && CSS -->
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
@@ -14,21 +16,33 @@
         <h1>RPG Character Maker</h1>
     </header>
 
-    <div class="row">
-        <main id="main">
-            <h2>Introdução</h2>
-            <p>É um criador de personagens de rpg, para aquela pessoa que gosta de criar personagens!</p>
-        </main>
+    <main id="main">
+        <h2>Introdução</h2>
+        <p>É um criador de personagens de rpg, para aquela pessoa que gosta de criar personagens!</p>
 
-        <aside id="aside">
-            <nav id="nav">
-                <h3>barra de navegação</h3>
-            </nav>
-        </aside>
-    </div>
+        <div id="create-form">
+            <div class="buttons-shown">
+                <button id="shown-race">Criar raça</button>
+                <button id="shown-title">Criar Titulo</button>
+                <button id="shown-person">Criar Personagem</button>
+            </div>
+
+            <form action="" class="shown">
+                <h2>Criar Raça</h2>
+            </form>
+            <form action="" class="shown">
+                <h2>Criar Titulo</h2>
+            </form>
+            <form action="" class="shown">
+                <h2>Criar Personagem</h2>
+            </form>
+        </div>
+    </main>
     <footer id="footer">
         <h3>Creative Commons</h3>
     </footer>
+
+    <script src="src/script.js"></script>
 </body>
 
 </html>

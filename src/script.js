@@ -49,7 +49,7 @@ occult.addEventListener("click", () => {
   }
 });
 
-/* Criar raça
+// Criar raça
 const createRace = document.getElementById('btn-create-race');
 const race = ['Selecione a raça'];
 
@@ -58,4 +58,4 @@ createRace.addEventListener('click', () => {
 
     race.push(getRace);
 });
-*/
+

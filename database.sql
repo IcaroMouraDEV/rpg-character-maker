@@ -1,0 +1,32 @@
+CREATE DATABASE rpg_character_maker;
+
+CREATE TABLE race (
+    idRace INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    descRace VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE title (
+    idTitle INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    descTitle VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE person (
+    idPerson INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    nivel VARCHAR(10) NOT NULL,
+    idRace INT NOT NULL,
+    idTitle INT NOT NULL,
+    hp VARCHAR(100) NOT NULL,
+    mp VARCHAR(100) NOT NULL,
+    forc VARCHAR(10) NOT NULL,
+    vit VARCHAR(10) NOT NULL,
+    dex VARCHAR(10) NOT NULL,
+    inte VARCHAR(10) NOT NULL,
+    wis VARCHAR(10) NOT NULL,
+    lck VARCHAR(10) NOT NULL,
+    mon VARCHAR(20) NOT NULL,
+    bounty VARCHAR(15) NOT NULL,
+    img VARCHAR(200) NOT NULL,
+
+    FOREIGN KEY (idRace) REFERENCES race(idRace),
+    FOREIGN KEY (idTitle) REFERENCES title(idTitle)
+)

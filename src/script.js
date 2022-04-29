@@ -1,3 +1,26 @@
+// Dark Mode
+const theme = document.getElementById('theme');
+const body = document.getElementsByTagName('body');
+
+theme.addEventListener('click', () => {
+    const themeNow = window.getComputedStyle(theme).getPropertyValue('background-color');
+
+    if (themeNow === 'rgb(26, 30, 33)') {
+        body[0].style.backgroundColor = '#262626';
+        body[0].style.color = 'whitesmoke';
+    
+        theme.className = 'btn btn-light light'
+        theme.innerHTML = 'White Mode'
+    } else {
+        body[0].style.backgroundColor = 'whitesmoke';
+        body[0].style.color = '#262626';
+    
+        theme.className = 'btn btn-dark dark'
+        theme.innerHTML = 'Dark Mode'
+    }
+});
+
+
 // Eventos para Mostrar e não mostrar os Forms
 const shownRace = document.getElementById("shown-race");
 const shownTitle = document.getElementById("shown-title");
@@ -48,14 +71,3 @@ occult.addEventListener("click", () => {
     form[i].className = "shown";
   }
 });
-
-// Criar raça
-const createRace = document.getElementById('btn-create-race');
-const race = ['Selecione a raça'];
-
-createRace.addEventListener('click', () => {
-    const getRace = document.getElementById('create-race').value;
-
-    race.push(getRace);
-});
-

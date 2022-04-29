@@ -1,4 +1,8 @@
 /* CSS DO PROJETO */
+body {
+    background-color: whitesmoke;
+}
+
 .shown {
     display: none;
 }

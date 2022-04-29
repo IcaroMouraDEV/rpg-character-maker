@@ -1,3 +1,4 @@
+// Eventos para Mostrar e não mostrar os Forms
 const shownRace = document.getElementById("shown-race");
 const shownTitle = document.getElementById("shown-title");
 const shownPerson = document.getElementById("shown-person");
@@ -47,3 +48,14 @@ occult.addEventListener("click", () => {
     form[i].className = "shown";
   }
 });
+
+/* Criar raça
+const createRace = document.getElementById('btn-create-race');
+const race = ['Selecione a raça'];
+
+createRace.addEventListener('click', () => {
+    const getRace = document.getElementById('create-race').value;
+
+    race.push(getRace);
+});
+*/

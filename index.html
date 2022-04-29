@@ -22,7 +22,7 @@
             <p class="fs-4">É um criador de personagens de rpg, para aquela pessoa que gosta de criar personagens!</p>
         </div>
         <div id="create-form">
-            <h3 class="display-5">Form</h3>
+            <h3 class="display-4">Form</h3>
             <div class="buttons-shown container mb-3">
                 <button class="btn btn-primary me-1" id="shown-race">Criar raça</button>
                 <button class="btn btn-primary me-1" id="shown-title">Criar Titulo</button>
@@ -30,14 +30,26 @@
                 <button class="btn btn-warning" id="occult">Ocultar Formulário</button>
             </div>
 
-            <form action="" class="form shown">
-                <h2>Criar Raça</h2>
+            <form action="" class="shown">
+                <div class="container mb-3">
+                    <h2 class="display-6">Criar Raça</h2>
+                </div>
+                <div class="container mb-4 row">
+                    <label for="create-race" class="col-sm-1 col-form-label">Raça</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="create-race" class="form-input" placeholder="Humano" required>
+                    </div>
+                </div>
+                <div class="container mb-3">
+                    <button class="btn btn-success" type="submit">Enviar</button>
+                    <button type="reset" class="btn btn-danger">Reset</button>
+                </div>
             </form>
             <form action="" class="shown">
-                <h2>Criar Titulo</h2>
+                <h2 class="display-6">Criar Titulo</h2>
             </form>
             <form action="" class="shown">
-                <h2>Criar Personagem</h2>
+                <h2 class="display-6">Criar Personagem</h2>
             </form>
         </div>
     </main>

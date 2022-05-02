@@ -1,0 +1,6 @@
+let calcHp = 100 + (vit * 50);
+let calcMp = 50 + (int * 25);
+let calcRegenHp = (calcHp * str) / 1000;
+let calcRegenMp = (calcMp * wis) / 1000;
+let calcTempRegenHp = calcHp / calcRegenHp;
+let calcTempRegenMp = calcMp / calcRegenMp;

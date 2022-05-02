@@ -1,44 +1,13 @@
-/* importando Fonte */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-/* body CSS */
-body{
-    background-color: #EEE; 
-    font-family: 'roboto', sans-serif;
+/* CSS DO PROJETO */
+body {
+    background-color: whitesmoke;
+    color: #262626;
 }
 
-/* header CSS */
-#header {
-    margin: -8px;
-    padding-top: 8px;
-    background-color: #111;
-    color: #EEE;
-    height: 100px;
+.shown {
+    display: none;
 }
 
-#header h1 {
-    text-align: center;
-}
-
-/* Common class CSS*/
-.row {
-    display: flex;
-    flex-direction: row;
-}
-
-/* main CSS */
-#main {
-    margin-top: 50px;
-    max-width: 1000px;
-    border: 1px solid #111;
-    padding: 10px;
-}
-
-/* aside CSS */
-#aside {
-    margin-top: 50px;
-    max-width: 300px;
-    margin-left: 50px;
-    border: 1px solid #111;
-    padding: 10px;
+.active {
+    display: block;
 }

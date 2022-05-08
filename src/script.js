@@ -93,4 +93,17 @@ btnCreateRace.addEventListener('click', () => {
   const getRace = document.getElementById('create-race').value;
   
   race.push(getRace);
+
+  document.getElementById('create-race').value = '';
+});
+
+const title = [];
+
+btnCreateTitle.addEventListener('click', () => {
+  const getTitle = document.getElementById('create-title').value;
+  
+  title.push(getTitle);
+  console.log(title);
+
+  document.getElementById('create-title').value = '';
 });

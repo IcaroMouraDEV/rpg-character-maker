@@ -71,3 +71,26 @@ occult.addEventListener("click", () => {
     form[i].className = "shown";
   }
 });
+
+const btnCreateRace = document.getElementById('btn-create-race');
+const btnCreateTitle = document.getElementById('btn-create-title');
+const btnCreatePerson = document.getElementById('btn-create-person');
+
+btnCreateRace.addEventListener('click', (event) => {
+  event.preventDefault();
+});
+btnCreateTitle.addEventListener('click', (event) => {
+  event.preventDefault();
+});
+
+btnCreatePerson.addEventListener('click', (event) => {
+  event.preventDefault();
+});
+
+const race = [];
+
+btnCreateRace.addEventListener('click', () => {
+  const getRace = document.getElementById('create-race').value;
+  
+  race.push(getRace);
+});

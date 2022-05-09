@@ -3,21 +3,21 @@ const theme = document.getElementById('theme');
 const body = document.getElementsByTagName('body');
 
 theme.addEventListener('click', () => {
-    const themeNow = window.getComputedStyle(theme).getPropertyValue('background-color');
+  const themeNow = window.getComputedStyle(theme).getPropertyValue('background-color');
 
-    if (themeNow === 'rgb(26, 30, 33)') {
-        body[0].style.backgroundColor = '#262626';
-        body[0].style.color = 'whitesmoke';
-    
-        theme.className = 'btn btn-light light'
-        theme.innerHTML = 'White Mode'
-    } else {
-        body[0].style.backgroundColor = 'whitesmoke';
-        body[0].style.color = '#262626';
-    
-        theme.className = 'btn btn-dark dark'
-        theme.innerHTML = 'Dark Mode'
-    }
+  if (themeNow === 'rgb(26, 30, 33)') {
+    body[0].style.backgroundColor = '#262626';
+    body[0].style.color = 'whitesmoke';
+
+    theme.className = 'btn btn-light light'
+    theme.innerHTML = 'White Mode'
+  } else {
+    body[0].style.backgroundColor = 'whitesmoke';
+    body[0].style.color = '#262626';
+
+    theme.className = 'btn btn-dark dark'
+    theme.innerHTML = 'Dark Mode'
+  }
 });
 
 
@@ -106,4 +106,14 @@ btnCreateTitle.addEventListener('click', () => {
   console.log(title);
 
   document.getElementById('create-title').value = '';
+});
+
+btnCreateRace.addEventListener('click', () => {
+    const select = document.getElementById('person-race');
+    const option = document.createElement('option');
+    option.className = 'option';
+    option.innerHTML = race[race.length - 1];
+    option.value = race[race.length - 1];
+
+    select.appendChild(option);    
 });

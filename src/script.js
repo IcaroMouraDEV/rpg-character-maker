@@ -129,5 +129,16 @@ btnCreateTitle.addEventListener('click', () => {
 });
 
 btnCreatePerson.addEventListener('click', () => {
-
+  const name = document.getElementById('person-name').value;
+  const level = document.getElementById('person-level').value;
+  const race = document.getElementById('person-race').value;
+  const title = document.getElementById('person-title').value;
+  const str = document.getElementById('person-str').value;
+  const vit = document.getElementById('person-vit').value;
+  const dex = document.getElementById('person-dex').value;
+  const int = document.getElementById('person-int').value;
+  const wis = document.getElementById('person-wis').value;
+  const lck = document.getElementById('person-lck').value;
+  
+  console.log(name, level, race, title, str, vit, dex, int, wis, lck);
 });

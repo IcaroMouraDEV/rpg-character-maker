@@ -127,3 +127,7 @@ btnCreateTitle.addEventListener('click', () => {
 
   select.appendChild(option);    
 });
+
+btnCreatePerson.addEventListener('click', () => {
+
+});

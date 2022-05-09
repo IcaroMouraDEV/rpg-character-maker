@@ -117,3 +117,13 @@ btnCreateRace.addEventListener('click', () => {
 
     select.appendChild(option);    
 });
+
+btnCreateTitle.addEventListener('click', () => {
+  const select = document.getElementById('person-title');
+  const option = document.createElement('option');
+  option.className = 'option';
+  option.innerHTML = title[title.length - 1];
+  option.value = title[title.length - 1];
+
+  select.appendChild(option);    
+});

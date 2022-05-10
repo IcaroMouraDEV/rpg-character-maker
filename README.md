@@ -1,10 +1,13 @@
-# rpg-character-maker
+# rpg-character-maker 
 
-## Introdução.
+## Introdução
 
-O rpc-character-maker é um projeto antigo feito com PHP, que estou refazendo em JS.
+- O rpg-character-maker é um projeto antigo feito com PHP, que estou refazendo com JS
+  - Ainda não está completo.
+  - futuramente o SQL será incluso, atualmente foi utilizado um esquema de arrays como um BD temporário
 
-No futuro será atualizado para se encaixar no POO;
-Como ainda estou estudando JS, O projeto não vai estar perfeito.
+Esse projeto atualmente utiliza as linguagens: ```HTML, CSS, JS```.
 
-(cc)
+O dev dele sou eu, ***Ícaro Joel***.
+
+Está atualmente na ``versão 0.1``

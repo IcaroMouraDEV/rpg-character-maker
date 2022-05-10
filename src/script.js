@@ -56,7 +56,6 @@ shownTitle.addEventListener("click", () => {
 shownPerson.addEventListener("click", () => {
   active = document.querySelectorAll(".active");
 
-  console.log(active.length);
   if (active.length > 0) {
     for (let i = 0; i < form.length; i += 1) {
       form[i].className = "shown";
@@ -103,7 +102,6 @@ btnCreateTitle.addEventListener('click', () => {
   const getTitle = document.getElementById('create-title').value;
   
   title.push(getTitle);
-  console.log(title);
 
   document.getElementById('create-title').value = '';
 });
@@ -128,17 +126,76 @@ btnCreateTitle.addEventListener('click', () => {
   select.appendChild(option);    
 });
 
-btnCreatePerson.addEventListener('click', () => {
-  const name = document.getElementById('person-name').value;
-  const level = document.getElementById('person-level').value;
-  const race = document.getElementById('person-race').value;
-  const title = document.getElementById('person-title').value;
+const formula = () => {
   const str = document.getElementById('person-str').value;
   const vit = document.getElementById('person-vit').value;
-  const dex = document.getElementById('person-dex').value;
   const int = document.getElementById('person-int').value;
-  const wis = document.getElementById('person-wis').value;
-  const lck = document.getElementById('person-lck').value;
-  
-  console.log(name, level, race, title, str, vit, dex, int, wis, lck);
+  const wis = document.getElementById('person-wis').value
+  const calcHp = 100 + (vit * 50);
+  const calcMp = 50 + (int * 25);
+  const calcRegenerationHp = (calcHp * str) / 1000;
+  const calcRegenerationMp = (calcMp * wis) / 1000;
+  const calc = {
+    hp: `${calcHp}/${calcHp} | regen: ${calcRegenerationHp}`,
+    mp: `${calcMp}/${calcMp} | regen: ${calcRegenerationMp}`
+  };
+
+  return Object.entries(calc);;
+}
+
+btnCreatePerson.addEventListener('click', () => {
+  const person = {
+    Name: document.getElementById('person-name').value,
+    Level: document.getElementById('person-level').value,
+    Race: document.getElementById('person-race').value,
+    Title: document.getElementById('person-title').value,
+    Hp: `${formula()[0][1]} hp/m`,
+    Mp: `${formula()[1][1]} mp/m`,
+    Str: document.getElementById('person-str').value,
+    Vit: document.getElementById('person-vit').value,
+    Dex: document.getElementById('person-dex').value,
+    Int: document.getElementById('person-int').value,
+    Wis: document.getElementById('person-wis').value,
+    Lck: document.getElementById('person-lck').value
+  }
+
+  const object  = Object.entries(person);
+  const card = document.getElementById('cards-container');
+  const div = document.createElement('div');
+  div.className = 'card';
+
+  card.appendChild(div);
+
+  const get = document.querySelectorAll('.card');
+  const divCard = get[get.length - 1];
+
+  const themeNow = window.getComputedStyle(theme).getPropertyValue('background-color');
+
+  if (themeNow === 'rgb(26, 30, 33)') {
+    divCard.style.backgroundColor = '#262626';
+    divCard.style.color = 'whitesmoke';
+  } else {
+    divCard.style.backgroundColor = 'whitesmoke';
+    divCard.style.color = '#262626';
+  }
+
+  for (let index = 0; index < Object.keys(person).length; index += 1) {
+    const p = document.createElement('p');
+    p.innerHTML = `${object[index][0]}:\u00A0\u00A0\u00A0${object[index][1]}`;
+
+    divCard.appendChild(p);
+  }
+});
+
+btnCreatePerson.addEventListener('click', () => {
+  document.getElementById('person-name').value = '';
+  document.getElementById('person-level').value = '';
+  document.getElementById('person-race').value = '';
+  document.getElementById('person-title').value = '';
+  document.getElementById('person-str').value = '';
+  document.getElementById('person-vit').value = '';
+  document.getElementById('person-dex').value = '';
+  document.getElementById('person-int').value = '';
+  document.getElementById('person-wis').value = '';
+  document.getElementById('person-lck').value = '';
 });
